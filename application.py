@@ -14,6 +14,16 @@ def get_list():
     items = database.get_items_xmas()
     return template("list.tpl", xmas_list=items)
 
+@route("/list/search")
+def get_search():
+    return template("search.tpl")
+
+@post("/list/add")
+def post_search():
+    description = request.forms.get("description")
+    print("description = ", [description])
+    database.search_list()
+
 @route("/task")
 def get_task():
     items = database.get_items_task()

@@ -14,6 +14,8 @@
 <hr/>
 <a href="/list/add">Add a new item</a>
 <hr/>
+<a href="/list/search">Search for an item</a>
+<hr/>
 <a href="/home">Return to Home Page</a>
 <hr/>
 </body>

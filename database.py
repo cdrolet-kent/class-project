@@ -23,6 +23,14 @@ def get_items_task(id=None):
     rows = [ {'id' : row[0], 'description': row[1]} for row in rows ]
     return rows
 
+def search_list(description):
+    cursor = connection.cursor()
+    rows = cursor.execute(f"select description from xmas_list where description={description}")
+    if description == rows:
+        return description
+    else:
+        return "The item does not exist"
+
 def add_item_xmas(description):
     cursor = connection.cursor()
     cursor.execute(f"insert into xmas_list(description) values ('{description}')")
