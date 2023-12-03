@@ -17,3 +17,4 @@ for item in ['shoes', 'brown hoodie', 'gift cards', 'coffee machine', 'bar instr
 connection.commit()
 connection.close()
 print("done.")
+

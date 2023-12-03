@@ -17,3 +17,4 @@ for item in ['finish school projects', 'groceries', 'laundry', 'clean apartment'
 connection.commit()
 connection.close()
 print("done.")
+

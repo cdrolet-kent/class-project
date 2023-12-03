@@ -10,3 +10,4 @@ rows2 = list(rows2)
 rows2 = [ {'id' : row[0], 'description': row[1]} for row in rows2 ]
 
 print(rows2)
+
