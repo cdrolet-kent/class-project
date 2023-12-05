@@ -18,7 +18,7 @@ def get_list():
 def get_search():
     return template("search.tpl")
 
-@post("/list/add")
+@post("/list/search")
 def post_search():
     description = request.forms.get("description")
     print("description = ", [description])
@@ -36,8 +36,9 @@ def get_add():
 @post("/list/add")
 def post_add():
     description = request.forms.get("description")
-    print("description = ", [description])
-    database.add_item_xmas(description)
+    price = request.forms.get("price")
+    #print("description = ", [description])
+    database.add_item_xmas(description, price)
     redirect("/list")
 
 @route("/task/add")
@@ -54,14 +55,16 @@ def post_add():
 @route("/list/update/<id>")
 def get_update(id):
     items = database.get_items_xmas(id)
+    #return template("update_item.tpl", id=id, description=description, price=price)
     return template("update_list.tpl", item=items[0])
 
 @post("/list/update")
 def post_update():
     description = request.forms.get("description")
+    price = request.forms.get("price")
     id = request.forms.get("id")
-    print("/list/update",[id,description])
-    database.update_item_xmas(id, description)
+    #print("/list/update",[id,description])
+    database.update_item_xmas(id, description, price)
     redirect("/list")
 
 @route("/task/update/<id>")
