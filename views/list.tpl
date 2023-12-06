@@ -4,8 +4,8 @@
 <hr/>
 <table>
   <tr>
-    <th>Item Wished For</th>
-    <th>Approximated Price</th>
+    <th>Item Wished For:</th>
+    <th>Approximated Price:</th>
   </tr>
 % for item in xmas_list:
   <tr>
